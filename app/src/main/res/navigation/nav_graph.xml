@@ -12,10 +12,19 @@
         tools:layout="@layout/fragment_dashboard">
         <action
             android:id="@+id/action_dashboardFragment_to_addTenantFragment"
-            app:destination="@id/addTenantFragment" />
+            app:destination="@id/addTenantFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
         <action
             android:id="@+id/action_dashboardFragment_to_viewTenantsFragment"
-            app:destination="@id/viewTenantsFragment" />
+            app:destination="@id/viewTenantsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 
     <fragment
@@ -25,7 +34,9 @@
         tools:layout="@layout/fragment_add_tenant">
         <action
             android:id="@+id/action_addTenantFragment_to_viewTenantsFragment"
-            app:destination="@id/viewTenantsFragment" />
+            app:destination="@id/viewTenantsFragment"
+            app:popUpTo="@id/dashboardFragment" />
+
     </fragment>
 
     <fragment
@@ -44,5 +55,10 @@
             android:id="@+id/action_viewTenantsFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.tenantmanagementsystemlab2.AboutFragment"
+        android:label="About" />
 
 </navigation>
